@@ -1,0 +1,13 @@
+import pandas as pd
+
+data = {
+    'Year': list(range(1880, 1895)),
+    'CSIRO Adjusted Sea Level': [-7.0, -6.8, -6.8, -6.9, -6.7, -6.5, -6.3, -6.4, -6.5, -6.2, -6.1, -6.0, -6.2, -5.9, -5.8],
+    'Lower Error Bound': [-7.1, -6.9, -6.9, -7.0, -6.8, -6.6, -6.4, -6.5, -6.6, -6.3, -6.2, -6.1, -6.3, -6.0, -5.9],
+    'Upper Error Bound': [-6.9, -6.7, -6.7, -6.8, -6.6, -6.4, -6.2, -6.3, -6.4, -6.1, -6.0, -5.9, -6.1, -5.8, -5.7],
+    'NOAA Adjusted Sea Level': [-6.8, -6.7, -6.6, -6.5, -6.4, -6.3, -6.2, -6.1, -6.1, -6.0, -5.9, -5.9, -5.8, -5.7, -5.6]
+}
+
+df = pd.DataFrame(data)
+df.to_csv('epa-sea-level.csv', index=False)
+print("Sample epa-sea-level.csv file created.")
